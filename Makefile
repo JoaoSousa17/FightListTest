@@ -5,16 +5,17 @@ TARGET = fightlist
 CC = gcc
 
 # Flags
-CFLAGS = -Wall -Wextra -std=c99
+CFLAGS = -Wall -Wextra -std=c99 -I./terminalVersionArchives -I./utils -I./gameLogic -I./leaderboard -I./storedData
 
 # Ficheiros fonte
-SRC = main.c jogo.c terminalGestion.c utils.c leaderboard.c
-
-# Ficheiros header
-HEADERS = jogo.h terminalGestion.h utils.h leaderboard.h dicionarios.h
+SRC = main.c \
+      gameLogic/jogo.c \
+      terminalVersionArchives/terminalGestion.c \
+      utils/utils.c \
+      leaderboard/leaderboard.c \
 
 # Comando de build
-$(TARGET): $(SRC) $(HEADERS)
+$(TARGET): $(SRC)
 	$(CC) $(CFLAGS) $(SRC) -o $(TARGET)
 
 # Limpeza

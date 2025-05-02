@@ -5,7 +5,7 @@
 #include "utils.h"
 
 #define MAX_ENTRADAS 5
-#define FICHEIRO "leaderboard.txt"
+#define FICHEIRO "storedData/leaderboard.txt"
 
 typedef struct {
     char iniciais[4];
